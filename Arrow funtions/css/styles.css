@@ -1,0 +1,53 @@
+body{
+    background-color:#49475B ;
+    display: flex;
+    flex-direction: column;
+    align-self: auto;
+}
+
+.kort{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.info-text{
+    margin: 0px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 280px;
+    text-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+    color: black;
+}
+
+.card figure{
+    position:relative;
+    height: 12px;
+    width: 100%;
+    margin: 0px;
+}
+
+.card-image{
+    overflow: hidden;
+    height: 400px;
+    width: 280px;
+}
+
+.card:hover > div figure{
+    filter:blur(7px);
+}
+
+.card:hover{
+    transition-duration: 200ms;
+}
+
+.card:hover > {
+    filter: blur(1px);
+}
