@@ -31,4 +31,9 @@ fetch(squareEyesAPI)
             container.appendChild(card);
         })
     },
-);
+); or 
+
+
+function filtering(){
+    const filterList = apiArray.filter(item => item.genre.to)
+}

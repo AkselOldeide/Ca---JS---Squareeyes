@@ -5,6 +5,18 @@ const container = document.querySelector('.kort');
 const urlParameter = new URLSearchParams(window.location.search)
 const movieID = urlParameter.get("id")
 
+function addToCart(x) {
+    const storedValue = localStorage.getItem(x) === 'true';
+    const changedState = !storedValue
+    localStorage.setItem(x, changedState);
+
+    if (changedState){
+        console.log(`Produktet ${x} lagt til i handlekurv`)
+    } else {
+        console.log(`Produktet ${x} fjernet fra handlekurv`)
+    }
+}
+
 fetch(squareEyesAPI)
     .then(function (HTTPresponse){
         return HTTPresponse.json()
@@ -22,7 +34,7 @@ fetch(squareEyesAPI)
             <p>Genre: ${selectedMovie.genre}</p>
             <p>Release year: ${selectedMovie.released}</p>
             <p>IMDB Rating: ${selectedMovie.rating}</p>
-            <button onclick="addToCart('${selectedMovie.id}'" class="add-to-cart-btn")"></button>
+            <button onclick="addToCart('${selectedMovie.id}')" class="add-to-cart-btn")"></button>
             `
             container.appendChild(filmPlakat)
         }
@@ -31,14 +43,4 @@ fetch(squareEyesAPI)
     }
     })
 
-    function addToCart(x) {
-        const storedValue = localStorage.getItem(x) === 'true';
-        const changedState = !storedValue
-        localStorage.setItem(x, changedState);
-    
-        if (changedState){
-            console.log(`Produktet ${x} lagt til i handlekurv`)
-        } else {
-            console.log(`Produktet ${x} fjernet fra handlekurv`)
-        }
-    }
+ 
