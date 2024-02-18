@@ -3,6 +3,13 @@ body{
     display: flex;
     flex-direction: column;
     align-self: auto;
+    margin: 0px;
+}
+
+header{
+    height: 80px;
+    background-color: beige;
+
 }
 
 .kort{
@@ -42,6 +49,7 @@ body{
 
 .card:hover > div figure{
     filter:blur(7px);
+    overlay:none
 }
 
 .card:hover{

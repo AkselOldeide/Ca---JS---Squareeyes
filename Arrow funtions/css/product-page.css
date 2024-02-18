@@ -3,6 +3,26 @@ body{
     display: flex;
     flex-direction: column;
     align-self: auto;
+    color: #E7E3D4;
+}
+
+/*Scrolls*/
+
+::-webkit-scrollbar{
+    background-color: black;
+    width: 2px;
+}
+
+::-webkit-scrollbar-track {
+    background: #49475B;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #E7E3D4;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #FFCF56;
 }
 
 .filmPlakat{
@@ -20,4 +40,20 @@ body{
 .add-to-cart-btn{
     width: 200px;
     height: 30px;
+}
+
+button{
+    background-color: #FFCF56;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: #ddaf3a;
+    transition-duration: 200ms;
+    box-shadow: rgb(57, 38, 11) 1px 1px 1px;
+}
+
+p{
+    margin: 5px;
 }
